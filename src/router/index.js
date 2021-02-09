@@ -5,8 +5,6 @@ import routes from './routes';
 const AppRouter = () => {
 	return (
 		<Router>
-			<NavBar routes={routes} />
-			<Link to="/test"> Test Anchor</Link>
 			<Switch>
 				{routes.map(({ Component, key, path }) => (
 					<Route
