@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MovieInfo from './MovieInfo';
+import Favorites from './Favorites';
 
 export default function App(props) {
 	const [query, updateQuery] = useState({
