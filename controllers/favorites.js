@@ -71,5 +71,23 @@ favoriteRouter.delete('/:id', async (req, res) => {
 	}
 });
 
+// Update
+
+favoriteRouter.put('/:id', async (req, res) => {
+	try {
+		const foundFavorites = await favoriteMovie.findByIdAndUpdate(req.params.id, req.body, {
+			new: true
+		});
+
+        res
+        .status(200)
+        .json(foundFavorites);
+	} catch (error) {
+        res
+        .status(400)
+        .json(error);
+	}
+});
+
 
 module.exports = favoriteRouter;
