@@ -36,7 +36,24 @@ favoriteRouter.get('/', async (req, res) => {
     }
 })
 
+// Show (Individual favorite movie)
 
+favoriteRouter.get('/:id', async (req, res) => {
+    try {
+        const foundFavorites = await favoriteMovie.findById(req.params.id)
+        // await foundFavorites.execPopulate('comments')
+
+        res
+        .status(200)
+        .json(foundFavorites)
+
+    } catch (error) {
+        res
+        .status(400)
+        .json(error)
+
+    }
+})
 
 
 

@@ -11,4 +11,5 @@ const favoriteMovieSchema = new Schema(
 });
 
 const favoriteMovie = model('favoriteMovie', favoriteMovieSchema);
+
 module.exports = favoriteMovie;
