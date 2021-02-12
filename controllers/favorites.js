@@ -19,4 +19,27 @@ favoriteRouter.post('/', async (req, res) => {
 })
 
 
+// INDEX (GRAB ALL FAVORITES)
+
+favoriteRouter.get('/', async (req, res) => {
+    try {
+        const foundFavorites = await favoriteMovie.find({})
+
+        res
+        .status(200)
+        .json(foundFavorites);
+
+    } catch(error) {
+        res
+        .status(400)
+        .json(error);
+    }
+})
+
+
+
+
+
+
+
 module.exports = favoriteRouter;

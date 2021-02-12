@@ -5,8 +5,8 @@ const favoriteMovieSchema = new Schema(
 	Poster: String,
 	Title: String,
 	Year: String,
-	imdbID: String,
-	Type: String
+	imdbID: String
+	// Type: String
 	// comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }]
 });
 
