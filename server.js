@@ -22,8 +22,12 @@ if (process.env.NODE_ENV !== 'development'){
   app.use(express.static('public'))
 }
 
-/* Controller Goes Here Remove the tes*/
+/* Controller */
 app.use(/\.[0-9a-z]+$/i, express.static('public'));
+
+app.use('/api/favorites', require('./controllers/favorites'))
+
+
 /* Controller Ends here */
 //LISTENER
 
