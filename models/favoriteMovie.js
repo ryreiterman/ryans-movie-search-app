@@ -1,8 +1,10 @@
 const { Schema, model } = require('mongoose');
 
-const favoriteMovieSchema = new Schema({
+const favoriteMovieSchema = new Schema(
+	{
+	Poster: String,
 	Title: String,
-	releaseDate: String,
+	Year: String,
 	imdbID: String
 	// comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }]
 });

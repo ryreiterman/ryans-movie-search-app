@@ -57,6 +57,7 @@ export default function App(props) {
 	return (
 		<div className="page-wrapper">
 			<h1 className="page-title">Ryan's Movie Search App</h1>
+
 			<form onSubmit={handleSubmit}>
 				<input
 					id="title"
