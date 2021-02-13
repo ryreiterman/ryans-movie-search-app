@@ -3,6 +3,7 @@ import MovieInfo from './MovieInfo';
 import Favorites from './Favorites';
 
 export default function App(props) {
+	const [favorite, setFavorite] = useState([]);
 	const [query, updateQuery] = useState({
 		baseURL: 'http://www.omdbapi.com/?',
 		apiKey: 'apikey=' + '843f9512',
@@ -54,6 +55,31 @@ export default function App(props) {
 		});
 	};
 
+	// Add favorite to database
+	const handleSubmitFavorite = async e => {
+		// e.preventDefault();
+		console.log(e);
+		const titleValue = e.Title;
+		const yearValue = e.Year;
+
+		try {
+			const response = await fetch('/api/favorites', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					Title: titleValue,
+					Year: yearValue
+				})
+			});
+			const data = await response.json();
+			setFavorite([...favorite, data]);
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
 	return (
 		<div className="page-wrapper">
 			<h1 className="page-title">Ryan's Movie Search App</h1>
@@ -69,7 +95,14 @@ export default function App(props) {
 				<input type="submit" value="Find Movies" className="button" />
 			</form>
 			<div className={'Page'}>
-				{Object.keys(movie).length ? <MovieInfo movie={movie} /> : ''}
+				{Object.keys(movie).length ? (
+					<MovieInfo
+						movie={movie}
+						handleSubmitFavorite={handleSubmitFavorite}
+					/>
+				) : (
+					''
+				)}
 			</div>
 		</div>
 	);

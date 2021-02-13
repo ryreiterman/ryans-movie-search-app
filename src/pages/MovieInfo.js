@@ -12,7 +12,12 @@ export default function MovieInfo(props) {
 						<h3>Year Release: {i.Year}</h3>
 						{/* <h4>ID: {i.imdbID}</h4> */}
 
-						<button className="button">Add to Favorites</button>
+						<button
+							onClick={() => props.handleSubmitFavorite(i)}
+							className="button"
+						>
+							Add to Favorites
+						</button>
 					</div>
 				);
 			})}
