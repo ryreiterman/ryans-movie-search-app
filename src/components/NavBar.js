@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = props => {
 	return (
-		<nav className="NavBar">
+		<nav className="nav-bar">
 			{props.routes.map(({ key, path }) => (
 				<Link key={key} to={path}>
 					{key}

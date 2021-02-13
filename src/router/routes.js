@@ -10,7 +10,7 @@ const routes = [
 	},
 	{
 		Component: App,
-		key: 'App',
+		key: 'Home',
 		path: '/'
 	}
 ];

@@ -47,6 +47,8 @@ export default function Favorites(props) {
 			setDidDelete(!didDelete);
 		} catch (error) {
 			console.error(error);
+		} finally {
+			window.location.assign('/favorites');
 		}
 	};
 
@@ -62,7 +64,9 @@ export default function Favorites(props) {
 
 								<h2>Title: {i.Title}</h2>
 								<h3>Year Release: {i.Year}</h3>
-								<button onClick={() => handleDelete(i)}>Delete</button>
+								<button onClick={() => handleDelete(i)} className="button">
+									Delete
+								</button>
 							</div>
 						</>
 					);

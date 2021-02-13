@@ -6,9 +6,7 @@
 
 body {
   font-family: 'Noto Sans', sans-serif;
-  padding: 1em .5em;
   background-color: #e7ecef;
-
 }
 
 img {
@@ -23,6 +21,27 @@ form {
 ol,
 ul {
   list-style: none;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+  padding: 1em;
+  background-color: #14213d;
+  width: 100vw;
+  
+}
+
+.nav-bar a {
+  margin-right: 3em;
+  color: #fca311;
+  font-weight: bold;
+}
+
+.nav-bar a:hover {
+  margin-right: 3em;
+  color: #f2f2f2;
 }
 
 .button {
@@ -41,6 +60,7 @@ ul {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: .5em;
+  padding: .5em;
 }
 
 .grid-wrapper {
@@ -49,6 +69,7 @@ ul {
   grid-auto-rows: auto;
   grid-gap: 1rem;
   padding: 1em;
+  margin: 1em;
   background-color: #495057;
 }
 
