@@ -64,6 +64,7 @@ export default function Favorites(props) {
 
 								<h2>Title: {i.Title}</h2>
 								<h3>Year Release: {i.Year}</h3>
+								<h3>Rating: {i.Rating} Stars</h3>
 								<button onClick={() => handleDelete(i)} className="button">
 									Delete
 								</button>

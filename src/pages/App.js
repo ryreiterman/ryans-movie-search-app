@@ -62,6 +62,7 @@ export default function App(props) {
 		const yearValue = e.Year;
 		const posterValue = e.Poster;
 		const imdbIDValue = e.imdbID;
+		const ratingValue = e.Rating;
 
 		try {
 			const response = await fetch('/api/favorites', {
@@ -73,7 +74,8 @@ export default function App(props) {
 					Title: titleValue,
 					Year: yearValue,
 					Poster: posterValue,
-					imdbID: imdbIDValue
+					imdbID: imdbIDValue,
+					Rating: ratingValue
 				})
 			});
 			const data = await response.json();

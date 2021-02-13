@@ -71,11 +71,17 @@ ul {
   padding: 1em;
   margin: 1em;
   background-color: #495057;
+  
 }
 
 .grid-item {
   padding: 1em;
   background-color: #e7ecef;
+}
+
+.grid-item img {
+  width: 276px;
+  height: 427px;
 }
 
 .grid-item > img, h2, h3, button {
