@@ -3,6 +3,7 @@ import MovieInfo from './MovieInfo';
 import Favorites from './Favorites';
 
 export default function App(props) {
+	const [movie, setMovie] = useState({});
 	const [favorite, setFavorite] = useState([]);
 	const [query, updateQuery] = useState({
 		baseURL: 'http://www.omdbapi.com/?',
@@ -11,8 +12,6 @@ export default function App(props) {
 		title: '',
 		searchURL: ''
 	});
-
-	const [movie, setMovie] = useState({});
 
 	useEffect(() => {
 		(async () => {
@@ -55,12 +54,14 @@ export default function App(props) {
 		});
 	};
 
-	// Add favorite to database
+	//////// Add favorite to database //////////////
 	const handleSubmitFavorite = async e => {
 		// e.preventDefault();
 		console.log(e);
 		const titleValue = e.Title;
 		const yearValue = e.Year;
+		const posterValue = e.Poster;
+		const imdbIDValue = e.imdbID;
 
 		try {
 			const response = await fetch('/api/favorites', {
@@ -70,7 +71,9 @@ export default function App(props) {
 				},
 				body: JSON.stringify({
 					Title: titleValue,
-					Year: yearValue
+					Year: yearValue,
+					Poster: posterValue,
+					imdbID: imdbIDValue
 				})
 			});
 			const data = await response.json();
