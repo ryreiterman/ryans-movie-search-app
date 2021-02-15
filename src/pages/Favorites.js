@@ -62,9 +62,9 @@ export default function Favorites(props) {
 						<div key={i._id} className="grid-item">
 							<img src={i.Poster} />
 							<Link to={`/${i._id}`}>
-								<h2>Title: {i.Title}</h2>
+								<h3>{i.Title}</h3>
 							</Link>
-							<h3>Rating: {i.Rating} Stars</h3>
+							<h4>Rating: {i.Rating} Stars</h4>
 							<button onClick={() => handleDelete(i)} className="button">
 								Delete
 							</button>

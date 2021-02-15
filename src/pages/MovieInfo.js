@@ -8,9 +8,9 @@ export default function MovieInfo(props) {
 				return (
 					<div key={i.imdbID} className="grid-item">
 						<img src={i.Poster} />
-						<h2>Title: {i.Title}</h2>
-						<h3>Year Release: {i.Year}</h3>
-						<h3>Rating: {i.Rating} Stars</h3>
+						<h3>{i.Title}</h3>
+						<h4>Year Released: {i.Year}</h4>
+						{/* <h4>Rating: {i.Rating} Stars</h4> */}
 
 						<button
 							onClick={() => props.handleSubmitFavorite(i)}
