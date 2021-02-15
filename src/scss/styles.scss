@@ -87,5 +87,12 @@ ul {
 
 .grid-item > img, h2, h3, button {
   padding: .5em 0;
+}
 
+.show-page-grid {
+  grid-template-columns: 1fr;
+}
+
+.show-page-item {
+  justify-self: center;
 }

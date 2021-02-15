@@ -21,7 +21,7 @@ export default function App(props) {
 					const data = await response.json();
 					await setMovie(data);
 					console.log(data);
-					// console.log(data.Search[0].Title);
+					console.log(data.Search[0].Title);
 				} catch (error) {
 					console.error(error);
 				} finally {

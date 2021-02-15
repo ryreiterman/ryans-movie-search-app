@@ -5,6 +5,7 @@ const favoriteMovieSchema = new Schema(
 	Poster: String,
 	Title: String,
 	Year: String,
+	Actors: String,
 	imdbID: String,
 	Rating: Number
 	// Type: String
