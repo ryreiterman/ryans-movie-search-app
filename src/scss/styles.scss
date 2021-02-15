@@ -25,6 +25,7 @@ ul {
 
 .nav-bar {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   border: 1px solid red;
   padding: 1em;

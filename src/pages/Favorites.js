@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import UpdateFavorite from './UpdateFavorite';
 
 export default function Favorites(props) {
 	const [favorite, setFavorite] = useState([]);
@@ -58,18 +59,20 @@ export default function Favorites(props) {
 			<div className="grid-wrapper">
 				{favorite.map(i => {
 					return (
-						<>
-							<div key={i.imdbID} className="grid-item">
-								<img src={i.Poster} />
-
+						<div key={i._id} className="grid-item">
+							<img src={i.Poster} />
+							<Link to={`/${i._id}`}>
 								<h2>Title: {i.Title}</h2>
-								<h3>Year Release: {i.Year}</h3>
-								<h3>Rating: {i.Rating} Stars</h3>
-								<button onClick={() => handleDelete(i)} className="button">
-									Delete
-								</button>
-							</div>
-						</>
+							</Link>
+							<h3>Year Release: {i.Year}</h3>
+							<h3>Rating: {i.Rating} Stars</h3>
+							<button onClick={() => handleDelete(i)} className="button">
+								Delete
+							</button>
+							<Link to={`/${i._id}/edit`}>
+								<button>Update Favorite</button>
+							</Link>
+						</div>
 					);
 				})}
 			</div>
