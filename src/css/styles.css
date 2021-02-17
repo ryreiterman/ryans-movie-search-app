@@ -4,12 +4,12 @@
 
 
 
-body {
+/* body {
   font-family: 'Noto Sans', sans-serif;
   background-color: #e7ecef;
-}
+} */
 
-img {
+/* img {
   max-width: 100%;
 }
 
@@ -31,9 +31,9 @@ ul {
   background-color: #14213d;
   width: 100vw;
   
-}
+} */
 
-.nav-bar a {
+/* .nav-bar a {
   margin-right: 3em;
   color: #fca311;
   font-weight: bold;
@@ -74,9 +74,9 @@ ul {
   grid-gap: 1rem;
   padding: 1em;
   margin: 1em;
-  background-color: #495057;
+  background-color: #495057; */
   
-}
+/* }
 
 .grid-item {
   padding: 1em;
@@ -86,9 +86,9 @@ ul {
 .grid-item img {
   width: 276px;
   height: 427px;
-}
+} */
 
-.grid-item > img, h2, h3, button {
+/* .grid-item > img, h2, h3, button {
   padding: .5em 0;
 }
 
@@ -102,4 +102,4 @@ ul {
 
 .input {
   max-width: 50%;
-}
+} */

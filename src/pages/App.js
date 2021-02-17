@@ -87,8 +87,8 @@ export default function App(props) {
 	};
 
 	return (
-		<div className="page-wrapper">
-			<h1 className="page-title">Ryan's Movie Search App</h1>
+		<div className="p-3">
+			<h1 className="text-4xl text-center">Ryan's Movie Search App</h1>
 
 			<form onSubmit={handleSubmit}>
 				<input
@@ -100,7 +100,7 @@ export default function App(props) {
 				/>
 				<input type="submit" value="Find Movies" className="button" />
 			</form>
-			<div className={'Page'}>
+			<div>
 				{Object.keys(movie).length ? (
 					<MovieInfo
 						movie={movie}
