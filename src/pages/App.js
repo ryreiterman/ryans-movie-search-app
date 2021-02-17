@@ -6,7 +6,7 @@ export default function App(props) {
 	const [movie, setMovie] = useState({});
 	const [favorite, setFavorite] = useState([]);
 	const [query, updateQuery] = useState({
-		baseURL: 'http://www.omdbapi.com/?',
+		baseURL: 'https://www.omdbapi.com/?',
 		apiKey: 'apikey=' + '843f9512',
 		option: '&s=',
 		title: '',
@@ -26,7 +26,7 @@ export default function App(props) {
 					console.error(error);
 				} finally {
 					updateQuery({
-						baseURL: 'http://www.omdbapi.com/?',
+						baseURL: 'https://www.omdbapi.com/?',
 						apiKey: 'apikey=' + '843f9512',
 						option: '&s=',
 						title: '',

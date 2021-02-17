@@ -24,20 +24,22 @@ export default function UpdateFavorite(props) {
 			setFavorite(data);
 		} catch (error) {
 			console.error(error);
+		} finally {
+			window.location.assign('/favorites');
 		}
 	};
 
 	return (
 		<div>
-			<h1>{favorite.Rating ? favorite.Rating : ''}</h1>
+			{/* <h1>{favorite.Rating ? favorite.Rating : ''}</h1> */}
 
 			<form
 				style={{ display: 'flex', flexDirection: 'column' }}
 				onSubmit={handleSubmit}
 			>
 				<label>
-					{' '}
-					Rating:{' '}
+					{/* {' '}
+					Rating:{' '} */}
 					<input type="text" ref={ratingInput} defaultValue={favorite.Rating} />
 				</label>
 				<input type="submit" value="Update Favorite" />

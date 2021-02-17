@@ -27,7 +27,6 @@ ul {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  border: 1px solid red;
   padding: 1em;
   background-color: #14213d;
   width: 100vw;
@@ -47,6 +46,10 @@ ul {
 
 .button {
   padding: .5em;
+}
+
+.fav-button {
+  margin-right: 1em;
 }
 
 .movie-search-field {
@@ -95,4 +98,8 @@ ul {
 
 .show-page-item {
   justify-self: center;
+}
+
+.input {
+  max-width: 50%;
 }

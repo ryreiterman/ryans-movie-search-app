@@ -65,11 +65,14 @@ export default function Favorites(props) {
 								<h3>{i.Title}</h3>
 							</Link>
 							<h4>Rating: {i.Rating} Stars</h4>
-							<button onClick={() => handleDelete(i)} className="button">
+							<button
+								onClick={() => handleDelete(i)}
+								className="button fav-button"
+							>
 								Delete
 							</button>
 							<Link to={`/${i._id}/edit`}>
-								<button>Update Favorite</button>
+								<button className="button">Rate It!</button>
 							</Link>
 						</div>
 					);
