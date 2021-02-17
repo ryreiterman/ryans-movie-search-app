@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import 'tailwindcss/tailwind.css';
 
 export default function MovieShowPage(props) {
 	const [movie, setMovie] = useState({});

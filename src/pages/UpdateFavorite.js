@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import 'tailwindcss/tailwind.css';
 
 export default function UpdateFavorite(props) {
 	const [favorite, setFavorite] = useState({

@@ -6,7 +6,7 @@
 const gulp = require('gulp');
 
 // Explanation for Students ---- This is for compiling SASS, we haven't learned SASS yet but this is as good a chance as any to to talk about how we could compile it.
-const sass = require('gulp-sass');
+// const sass = require('gulp-sass');
 
 // Use Nodemon programatically
 const nodemon = require('gulp-nodemon');
@@ -53,7 +53,7 @@ gulp.task('default', (cb) => {
 	 serveStatic: ['./public']
 	});
 	// SET UP WATCJERS TO LISTEN TO CHANGES IN FILES
-	gulp.watch('./src/scss/**/*',  gulp.task('styles'));
+	gulp.watch('./src/css/**/*',  gulp.task('styles'));
 	gulp.watch('./src/**/*.js', gulp.task('webpack'));
 	gulp.watch('./src/*', gulp.task('webpack'));
 	// LISTEN FOR WHEN TO RELOAD PAGES
@@ -72,7 +72,7 @@ gulp.task('default', (cb) => {
 // Explanation for Students ---- This is compiles our styles
 gulp.task('styles', (cb) => {
 	gulp
-		.src('src/scss/**/*.scss')
+		.src('src/css/**/*.css')
 		.pipe(
 			sass({
 				outputStyle: 'compressed'

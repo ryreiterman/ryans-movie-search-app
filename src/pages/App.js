@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MovieInfo from './MovieInfo';
 import Favorites from './Favorites';
+import 'tailwindcss/tailwind.css';
 
 export default function App(props) {
 	const [movie, setMovie] = useState({});

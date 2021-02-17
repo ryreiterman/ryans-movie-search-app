@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import UpdateFavorite from './UpdateFavorite';
+import 'tailwindcss/tailwind.css';
 
 export default function Favorites(props) {
 	const [favorite, setFavorite] = useState([]);

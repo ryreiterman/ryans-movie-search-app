@@ -23,12 +23,12 @@ module.exports = env => {
 					use: ['babel-loader', 'prettier-loader']
 				},
 				{
-					test: /\.scss$/,
+					test: /\.css$/,
 					use: [
 						'style-loader',
 						MiniCssExtractPlugin.loader,
 						'css-loader',
-						'sass-loader',
+						// 'sass-loader',
 						'postcss-loader'
 					]
 				}
