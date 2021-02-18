@@ -56,30 +56,32 @@ export default function Favorites(props) {
 
 	return (
 		<>
-			<h1 className="text-4xl text-center">Favorite Movies</h1>
+			<h1 className="text-4xl text-center p-2">Favorite Movies</h1>
 			<div className="flex flex-wrap justify-center bg-gray-200 -mx-2 mt-6">
 				{favorite.map(i => {
 					return (
 						<div
 							key={i._id}
-							className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-1 m-1 bg-white border border-gray-500 rounded-sm"
+							className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2 m-1 bg-white border border-gray-500 rounded-md"
 						>
 							<img
 								src={i.Poster}
-								className="rounded h-445px w-full object-cover align-middle"
+								className="rounded h-2/3 w-full object-cover align-middle"
 							/>
 							<Link to={`/${i._id}`}>
-								<h3>{i.Title}</h3>
+								<h3 className="text-xl my-2">{i.Title}</h3>
 							</Link>
 							<h4>Rating: {i.Rating} Stars</h4>
 							<button
 								onClick={() => handleDelete(i)}
-								className="button fav-button"
+								className="border border-gray-500 p-2 mr-2 mt-2"
 							>
 								Delete
 							</button>
 							<Link to={`/${i._id}/edit`}>
-								<button className="button">Rate It!</button>
+								<button className="border border-gray-500 p-2 mt-2">
+									Rate It!
+								</button>
 							</Link>
 						</div>
 					);

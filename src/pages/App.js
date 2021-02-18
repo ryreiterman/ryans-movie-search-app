@@ -96,9 +96,13 @@ export default function App(props) {
 					type="text"
 					value={query.title}
 					onChange={handleChange}
-					className="border-double"
+					className="border border-gray-500 p-1 mr-1 focus:ring-2 focus:ring-blue-600"
 				/>
-				<input type="submit" value="Find Movies" className="border-double" />
+				<input
+					type="submit"
+					value="Find Movies"
+					className="p-1 border border-gray-500"
+				/>
 			</form>
 			<div>
 				{Object.keys(movie).length ? (
