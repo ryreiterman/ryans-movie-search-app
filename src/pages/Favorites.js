@@ -56,12 +56,18 @@ export default function Favorites(props) {
 
 	return (
 		<>
-			<h1 className="page-title">Favorite Movies</h1>
-			<div className="grid-wrapper">
+			<h1 className="text-4xl text-center">Favorite Movies</h1>
+			<div className="flex flex-wrap justify-center bg-gray-200 -mx-2 mt-6">
 				{favorite.map(i => {
 					return (
-						<div key={i._id} className="grid-item">
-							<img src={i.Poster} />
+						<div
+							key={i._id}
+							className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-1 m-1 bg-white border border-gray-500 rounded-sm"
+						>
+							<img
+								src={i.Poster}
+								className="rounded h-445px w-full object-cover align-middle"
+							/>
 							<Link to={`/${i._id}`}>
 								<h3>{i.Title}</h3>
 							</Link>

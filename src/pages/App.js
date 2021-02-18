@@ -90,15 +90,15 @@ export default function App(props) {
 		<div className="p-3">
 			<h1 className="text-4xl text-center">Ryan's Movie Search App</h1>
 
-			<form onSubmit={handleSubmit}>
+			<form className="text-center mt-8" onSubmit={handleSubmit}>
 				<input
 					id="title"
 					type="text"
 					value={query.title}
 					onChange={handleChange}
-					className="movie-search-field"
+					className="border-double"
 				/>
-				<input type="submit" value="Find Movies" className="button" />
+				<input type="submit" value="Find Movies" className="border-double" />
 			</form>
 			<div>
 				{Object.keys(movie).length ? (
