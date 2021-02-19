@@ -23,7 +23,7 @@ export default function MovieInfo(props) {
 
 						<button
 							onClick={() => props.handleSubmitFavorite(i)}
-							className="border border-gray-500 p-2 mt-1"
+							className="border border-gray-500 p-2 transition duration-500 ease-in-out hover:bg-blue-700 hover:text-yellow-400 transform hover:-translate-y-1 hover:scale-110"
 						>
 							Add to Favorites
 						</button>

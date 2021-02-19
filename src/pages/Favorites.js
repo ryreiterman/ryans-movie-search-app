@@ -74,12 +74,12 @@ export default function Favorites(props) {
 							<h4>Rating: {i.Rating} Stars</h4>
 							<button
 								onClick={() => handleDelete(i)}
-								className="border border-gray-500 p-2 mr-2 mt-2"
+								className="border border-gray-500 p-2 mr-2 mt-1"
 							>
 								Delete
 							</button>
 							<Link to={`/${i._id}/edit`}>
-								<button className="border border-gray-500 p-2 mt-2">
+								<button className="border border-gray-500 p-2 mt-1">
 									Rate It!
 								</button>
 							</Link>

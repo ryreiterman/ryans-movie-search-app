@@ -57,8 +57,6 @@ export default function App(props) {
 
 	//////// Add favorite to database //////////////
 	const handleSubmitFavorite = async e => {
-		// e.preventDefault();
-		console.log(e);
 		const titleValue = e.Title;
 		const yearValue = e.Year;
 		const posterValue = e.Poster;
