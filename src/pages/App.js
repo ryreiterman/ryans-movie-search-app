@@ -100,7 +100,7 @@ export default function App(props) {
 				<input
 					type="submit"
 					value="Find Movies"
-					className="p-1 border border-gray-500"
+					className="p-1 border border-gray-500 transition duration-500 ease-in-out hover:bg-blue-700 hover:text-yellow-400"
 				/>
 			</form>
 			<div>

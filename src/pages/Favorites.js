@@ -42,16 +42,16 @@ export default function Favorites(props) {
 	return (
 		<>
 			<h1 className="text-4xl text-center p-2">Favorite Movies</h1>
-			<div className="flex flex-wrap justify-center bg-gray-200 -mx-2 mt-6">
+			<div className="flex flex-wrap flex-1 overflow-hidden justify-center bg-gray-200">
 				{favorite.map(i => {
 					return (
 						<div
 							key={i._id}
-							className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2 m-1 bg-white border border-gray-500 rounded-md"
+							className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2 bg-white border-2 border-black rounded-md mt-1 ml-1 flex flex-col"
 						>
 							<img
 								src={i.Poster}
-								className="rounded h-2/3 w-full object-cover align-middle"
+								className="rounded w-full flex-grow object-cover align-middle"
 							/>
 							<Link to={`/${i._id}`}>
 								<h3 className="text-xl my-2">{i.Title}</h3>
@@ -59,12 +59,12 @@ export default function Favorites(props) {
 							<h4>Rating: {i.Rating} Stars</h4>
 							<button
 								onClick={() => handleDelete(i)}
-								className="border border-gray-500 p-2 mr-2 mt-1"
+								className="border border-gray-500 p-2 transition duration-500 ease-in-out hover:bg-blue-700 hover:text-yellow-400 block mt-auto"
 							>
 								Delete
 							</button>
 							<Link to={`/${i._id}/edit`}>
-								<button className="border border-gray-500 p-2 mt-1">
+								<button className="border border-gray-500 p-2 transition duration-500 ease-in-out hover:bg-blue-700 hover:text-yellow-400 block mt-auto w-full">
 									Rate It!
 								</button>
 							</Link>
