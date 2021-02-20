@@ -22,21 +22,6 @@ export default function Favorites(props) {
 		})();
 	}, []);
 
-	// // pull movie based on id
-	// useEffect(() => {
-	// 	(async () => {
-	// 		try {
-	// 			// fetch movie
-	// 			const response = await fetch(`/api/favorites/${props.match.params.id}`);
-	// 			const data = await response.json();
-	// 			setFavorite(data);
-	// 		} catch (error) {
-	// 			console.error(error);
-	// 		}
-	// 	})();
-	// 	// only loads when page loads = []
-	// }, [favorite, didDelete]);
-
 	const handleDelete = async e => {
 		try {
 			const response = await fetch(`/api/favorites/${e._id}`, {
