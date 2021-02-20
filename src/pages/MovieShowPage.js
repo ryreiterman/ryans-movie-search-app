@@ -5,8 +5,6 @@ import 'tailwindcss/tailwind.css';
 export default function MovieShowPage(props) {
 	const [movie, setMovie] = useState({});
 
-	
-
 	// pull movie based on id
 	useEffect(() => {
 		(async () => {
