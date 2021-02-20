@@ -4,15 +4,15 @@ import 'tailwindcss/tailwind.css';
 
 export default function MovieInfo(props) {
 	return (
-		<div className="flex flex-wrap justify-center bg-gray-200 -mx-2 mt-6">
+		<div className="flex flex-wrap bg-gray-200 justify-center h-auto">
 			{props.movie.Search.map(i => {
 				return (
 					<div
 						key={i.imdbID}
-						className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 h-auto p-2 m-1 bg-white border border-gray-500 rounded-md"
+						className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2 bg-white border-2 border-black rounded-md ml-1 flex flex-col h-full"
 					>
 						<img
-							className="rounded h-2/3 w-full object-cover align-middle"
+							className="rounded w-full flex-grow object-cover align-middle"
 							src={i.Poster}
 							alt="Movie poster"
 						/>
@@ -23,7 +23,7 @@ export default function MovieInfo(props) {
 
 						<button
 							onClick={() => props.handleSubmitFavorite(i)}
-							className="border border-gray-500 p-2 transition duration-500 ease-in-out hover:bg-blue-700 hover:text-yellow-400 transform hover:-translate-y-1 hover:scale-110"
+							className="border border-gray-500 p-2 transition duration-500 ease-in-out hover:bg-blue-700 hover:text-yellow-400 transform hover:-translate-y-1 hover:scale-110 block mt-auto"
 						>
 							Add to Favorites
 						</button>

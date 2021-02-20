@@ -26,7 +26,7 @@ if (process.env.NODE_ENV !== 'development'){
 app.use(/\.[0-9a-z]+$/i, express.static('public'));
 
 app.use('/api/favorites', require('./controllers/favorites'))
-
+console.log(process.env);
 
 /* Controller Ends here */
 //LISTENER

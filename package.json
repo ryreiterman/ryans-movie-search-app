@@ -8,7 +8,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build && gulp styles",
+    "prod:build": "gulp build && gulp styles",
     "dev:webpack": "webpack --mode development --env.NODE_ENV=dev",
     "build:webpack": "webpack --mode production --env.NODE_ENV=production",
     "dev": "gulp",

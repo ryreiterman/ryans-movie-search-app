@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MovieInfo from './MovieInfo';
 import Favorites from './Favorites';
+import config from '../config';
 import 'tailwindcss/tailwind.css';
 
 export default function App(props) {
@@ -8,7 +9,7 @@ export default function App(props) {
 	const [favorite, setFavorite] = useState([]);
 	const [query, updateQuery] = useState({
 		baseURL: 'https://www.omdbapi.com/?',
-		apiKey: 'apikey=' + '843f9512',
+		apiKey: 'apikey=' + config.apiKey,
 		option: '&s=',
 		title: '',
 		searchURL: ''
@@ -28,7 +29,7 @@ export default function App(props) {
 				} finally {
 					updateQuery({
 						baseURL: 'https://www.omdbapi.com/?',
-						apiKey: 'apikey=' + '843f9512',
+						apiKey: 'apikey=' + config.apiKey,
 						option: '&s=',
 						title: '',
 						searchURL: ''

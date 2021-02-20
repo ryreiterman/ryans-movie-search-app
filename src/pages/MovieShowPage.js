@@ -43,7 +43,7 @@ export default function MovieShowPage(props) {
 	// 	});
 	// };
 
-	// pull blog based on id
+	// pull movie based on id
 	useEffect(() => {
 		(async () => {
 			try {
